@@ -1,3 +1,14 @@
+/*
+  SISTEMA DE VARIABLES CSS - ARQUITECTURA DE TEMAS
+  Estas variables controlan toda la paleta de colores del sitio.
+  El tema se cambia modificando el atributo data-theme en el elemento body (realizado por JavaScript).
+
+  VARIABLES TEMA OSCURO (por defecto):
+  - --bg-primary: color de fondo principal (muy oscuro)
+  - --accent-strong: color destacado vibrante (verde claro) para atraer atención
+  - --text-primary: texto principal (claro para contraste)
+  - --border: color de bordes (verde con transparencia)
+*/
 :root {
 	--bg-primary: #080c0f;
 	--bg-secondary: #10171d;
@@ -11,6 +22,12 @@
 	--footer-bg: rgba(4, 7, 9, 0.95);
 }
 
+/*
+  TEMA CLARO - Sobrescribe variables :root cuando usuario selecciona tema light
+  El selector body[data-theme="light"] tiene mayor especificidad, por eso sus estilos prevalecen
+  Todos los elementos que usan var(--bg-primary), var(--accent-strong), etc.
+  automáticamente reciben estos valores en lugar de los del :root
+*/
 body[data-theme="light"] {
 	--bg-primary: #dbe5e8;
 	--bg-secondary: #f4f7f8;
@@ -24,6 +41,13 @@ body[data-theme="light"] {
 	--footer-bg: rgba(232, 240, 243, 0.95);
 }
 
+/*
+  ESTILOS BASE DEL ELEMENTO BODY
+  - min-height: 100vh: asegura que body ocupe al menos toda la altura de pantalla
+  - color: usa variable CSS que cambia según tema (oscuro o claro)
+  - background: gradiente radiante doble + gradiente lineal para atmosfera cinematográfica
+  - Todos los colores usan variables CSS para permitir cambio de tema dinámico
+*/
 body {
 	min-height: 100vh;
 	color: var(--text-primary);
@@ -34,6 +58,12 @@ body {
 		linear-gradient(150deg, var(--bg-primary), var(--bg-secondary));
 }
 
+/*
+  BARRA DE NAVEGACIÓN - Componente permanente en todas las páginas
+  - background: variable para aplicar transparencia según tema
+  - backdrop-filter: blur crea efecto glassmorphism (vidrio translúcido moderno)
+  - border-bottom: define separación visual del contenido principal
+*/
 .navbar {
 	background: var(--nav-bg);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -55,6 +85,13 @@ body {
 	color: var(--accent-strong) !important;
 }
 
+/*
+  BOTÓN DE TEMA CLARO/OSCURO
+  - Este botón se encuentra en la navbar de todas las páginas
+  - Al hacer click dispara la función inicializarTema() en script.js
+  - El texto cambia dinámicamente: "Modo claro" o "Modo oscuro" según tema activo
+  - Usa variables CSS para mantener colores consistentes con el tema
+*/
 .btn-outline-accent {
 	border-color: var(--accent);
 	color: var(--accent-strong);
@@ -67,6 +104,14 @@ body {
 	color: #041e14;
 }
 
+/*
+  SECCIÓN HERO - Primera vista del usuario
+  - Ocupa mucho espacio visual para impacto inmediato
+  - background: combina overlay oscuro con imagen de fondo
+  - El overlay (linear-gradient) asegura texto legible sobre la imagen
+  - padding: 7rem genera espacio para contenido y efectos visuales
+  - Esta es la sección más importante para captar atención del visitante
+*/
 .hero {
 	padding: 7rem 1rem;
 	background:
@@ -129,6 +174,13 @@ li {
 .character-list .list-group-item {
 	background-color: rgba(8, 12, 15, 0.65);
 	border-color: rgba(255, 255, 255, 0.14);
+/*
+  BOTÓN DE PERSONAJE - Elemento interactivo que abre panels de biografía
+  - width: 100%: permite hacer click en cualquier parte del área
+  - background: transparent y border: 0: estilo limpio y minimalista
+  - text-align: left: alinea el texto del nombre a la izquierda
+  - Este botón tiene atributo data-target="{nombre}" para identificar qué panel abrir
+*/
 	color: var(--text-primary);
 	padding: 0.9rem 1rem;
 }
@@ -147,6 +199,14 @@ li {
 	font-size: 1.02rem;
 	font-weight: 600;
 }
+/*
+  PANEL DE BIOGRAFÍA DE PERSONAJE
+  - Se oculta inicialmente con atributo hidden en HTML
+  - Cuando se hace click, JavaScript remueve el hidden para mostrar contenido
+  - animation: reveal-up: hace que el panel aparezca suavemente desde abajo
+  - background translúcido: permite ver gradiente de fondo a través del panel
+  - border-radius: esquinas redondeadas para look moderno
+*/
 
 .character-trigger:focus-visible {
 	outline: 2px solid var(--accent-strong);
@@ -188,6 +248,14 @@ li {
 	margin-top: auto;
 	padding: 1rem;
 	background-color: var(--footer-bg);
+/*
+  ANIMACIONES DE ENTRADA
+  - .fade-in: aplica a secciones principales
+  - .stagger-item: aplica a elementos listados para crear efecto secuencial
+  - El estado inicial (opacity: 0, translateY) es el "antes"
+  - animation: forwards asegura que elemento queda en estado "después" al terminar
+  - Elementos comienzan invisibles y más abajo, luego aparecen hacia arriba
+*/
 	border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -195,11 +263,26 @@ li {
 	margin: 0;
 	color: var(--text-muted);
 }
+/*
+  CLASES DE RETRASO DE ANIMACIÓN
+  - .delay-1, .delay-2, .delay-3: retrasan inicio de animación
+  - Esto crea efecto visual de "cascada" donde elementos aparecen uno tras otro
+  - Ejemplo: primer elemento sin delay, segundo con delay-1, tercero con delay-2
+  - Mejora la experiencia visual al cargar la página
+*/
 
 .fade-in,
 .stagger-item {
 	opacity: 0;
 	transform: translateY(16px);
+/*
+  DEFINICIÓN DE ANIMACIÓN: reveal-up (aparición hacia arriba)
+  - from: estado inicial (invisible, 16px más abajo)
+  - to: estado final (visible, posición original)
+  - Duración: controlada por animation: XXms en clase que la usa
+  - Se aplica a elementos .fade-in y .stagger-item
+  - Efecto visual: elemento aparece suavemente desde abajo hacia posición final
+*/
 	animation: reveal-up 600ms ease forwards;
 }
 
@@ -212,6 +295,13 @@ li {
 }
 
 .delay-3 {
+/*
+  ACCESIBILIDAD: Respeto a preferencias de movimiento reducido
+  - Algunos usuarios tienen sensibilidad a animaciones rápidas o movimiento excesivo
+  - prefers-reduced-motion: reduce checkea esta preferencia en el sistema operativo
+  - Cuando está activada, desactivamos todas las animaciones (animation: none)
+  - Elemento sigue siendo visible pero sin movimiento: opacity: 1, transform: none
+*/
 	animation-delay: 360ms;
 }
 
@@ -221,6 +311,13 @@ li {
 		transform: translateY(16px);
 	}
 
+/*
+  RESPONSIVE DESIGN - Media queries para dispositivos móviles
+  - max-width: 767px: aplica estilos para tablets y teléfonos
+  - Reduce padding y tamaños de fuente para pantallas pequeñas
+  - Ejemplo: hero en móvil tiene menos padding que en desktop
+  - Bootstrap ya maneja muchos estilos responsive, pero aquí hacemos ajustes personalizados
+*/
 	to {
 		opacity: 1;
 		transform: translateY(0);

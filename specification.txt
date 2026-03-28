@@ -1,0 +1,11 @@
+HTML tags usadas:
+html, head, meta, title, body, nav, div, ul, ol, li, a, button, header, main, section, article, h1, h2, p, img, table, thead, tbody, tr, th, td, strong, script
+
+CSS propiedades:
+min-height, color, font-family, background, border-bottom, backdrop-filter, font-weight, letter-spacing, border-color, padding, text-align, font-size, margin, max-width, margin-top, margin-bottom, border, border-radius, box-shadow, width, cursor, outline, outline-offset, object-fit, opacity, transform, animation, animation-delay
+
+Bootstrap:
+Se utilizo Bootstrap para estructurar y hacer responsive el sitio con componentes y clases como navbar, navbar-toggler con collapse, container, row, col-md/col-lg, btn, list-group, table-responsive y utilidades de espaciado (mt, ms, g). Tambien se uso bootstrap.bundle.min.js para el comportamiento del menu en mobile.
+
+JavaScript:
+Se utilizo JavaScript para agregar interactividad real: saludo al usuario, cambio de tema claro/oscuro con persistencia en localStorage, apertura/cierre de paneles desplegables de personajes (acordeon en linea), actualizacion de atributos aria-expanded y soporte de teclado (Enter/Espacio) para mejorar accesibilidad.

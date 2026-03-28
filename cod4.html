@@ -1,6 +1,13 @@
+<!--
+  Página: Call of Duty 4 Modern Warfare
+  Propósito: Mostrar información detallada sobre el primer juego de la trilogia
+  Contiene: Historia, tabla de personajes, curiosidades e imagen descriptiva
+  Estructura: Usa Bootstrap para responsive design y estilos.css para tema personalizado
+-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Metadatos obligatorios para navegadores modernos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -8,8 +15,12 @@
     <title>COD 4</title>
 </head>
 <body>
+    <!-- Barra de navegación principal: aparece en todas las páginas para facilitar la navegación -->
+    <!-- navbar-expand-lg: menú colapsable en pantallas pequeñas -->
+    <!-- navbar-dark: estilo oscuro que combina con el tema de la saga -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
+            <!-- Logo del sitio que enlaza a la página principal -->
             <a class="navbar-brand" href="index.html">MW Saga</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
                 aria-controls="menu" aria-expanded="false" aria-label="Abrir menu de navegacion">
@@ -32,6 +43,7 @@
         </div>
     </nav>
 
+    <!-- Contenido principal de la página -->
     <main class="container page-section">
         <section class="content-card fade-in delay-1">
             <h1>Call of Duty 4: Modern Warfare</h1>
@@ -84,6 +96,8 @@
                     epico sobre un puente destruido.
                 </p>
 
+                <!-- Tabla de personajes: muestra información de 5 personajes clave del juego -->
+                <!-- table-responsive: garantiza que la tabla sea visible en dispositivos móviles -->
                 <h2 class="mt-4">Personajes Principales</h2>
                 <div class="table-responsive">
                     <table class="table table-dark table-hover align-middle">

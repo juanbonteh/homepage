@@ -1,6 +1,13 @@
+<!--
+  Página: Personajes Principales
+  Propósito: Mostrar cuatro personajes iconos de la trilogia con perfiles expandibles
+  Funcionalidad: Usa JavaScript para crear un acordeón interactivo
+  Característica: Al hacer click en un personaje, se despliega su biografía completa
+-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Metadatos y enlace a Bootstrap + tema personalizado -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -41,7 +48,14 @@
                 a iconos culturales de los videojuegos.
             </p>
 
+            <!-- Lista de personajes con acordeón interactivo -->
+            <!-- Cada botón tiene data-target que identifica qué panel abrir -->
+            <!-- Los panels tienen id="panel-{nombre}" y hidden por defecto para ocultar contenido -->
             <ul class="list-group character-list">
+                <!-- Elemento de lista con botón para expandir perfil de personaje -->
+                <!-- character-trigger: clase que identifica botones que abren panels de personajes -->
+                <!-- data-target="price": identifica cuál panel debe abrirse al hacer click -->
+                <!-- aria-expanded="false": atributo de accesibilidad para lectores de pantalla -->
                 <li class="list-group-item stagger-item">
                     <button class="character-trigger" type="button" data-target="price" aria-expanded="false">
                         1. Captain John Price (El Mentor)
