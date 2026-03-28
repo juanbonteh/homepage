@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Modern Warfare Saga</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MW Saga</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Abrir menu de navegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cod4.html">COD 4</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mw2.html">MW2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mw3.html">MW3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="personajes.html">Personajes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="curiosidades.html">Curiosidades</a></li>
+                </ul>
+                <button class="btn btn-sm btn-outline-accent ms-lg-3 mt-3 mt-lg-0" type="button" id="themeToggle"
+                    aria-label="Cambiar entre tema claro y oscuro">
+                    Tema
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero text-center fade-in">
+        <div class="container">
+            <h1>Call of Duty: Modern Warfare</h1>
+            <p class="hero-subtitle">La trilogia que definio los shooters modernos</p>
+            <button class="btn btn-accent" onclick="saludo()">Explorar</button>
+        </div>
+    </header>
+
+    <main class="container page-section">
+        <section class="content-card row g-4 align-items-start fade-in delay-1">
+            <div class="col-lg-7 stagger-item">
+                <h2>Call of Duty: Modern Warfare - La Trilogia que Redefinio el Genero</h2>
+                <p>
+                    Hablar de Modern Warfare no es solo hablar de una serie de videojuegos; es hablar del
+                    fenomeno que cambio la industria del entretenimiento para siempre. Entre 2007 y 2011,
+                    la trilogia original desarrollada por Infinity Ward llevo a los jugadores desde los
+                    campos de batalla historicos de la Segunda Guerra Mundial hacia la crudeza, el suspenso
+                    y la escala cinematografica de los conflictos contemporaneos.
+                </p>
+
+                <h2 class="mt-4">Una Narrativa de Impacto Global</h2>
+                <p>
+                    La saga nos sumerge en una red de conspiraciones geopoliticas donde las fronteras entre
+                    el bien y el mal se desdibujan. Desde el asalto inicial al carguero en el estrecho de
+                    Bering (MW1), pasando por la impactante invasion a los Estados Unidos (MW2), hasta la
+                    caida de las grandes capitales europeas en una Tercera Guerra Mundial total (MW3), la
+                    historia nunca baja el ritmo.
+                </p>
+                <p>
+                    A diferencia de otros shooters, Modern Warfare se atrevio a mostrar el costo humano de la
+                    guerra, con giros de guion que dejaron a una generacion de jugadores sin aliento:
+                    traiciones inesperadas, bajas nucleares y sacrificios heroicos que elevaron el estandar
+                    de la narrativa en primera persona.
+                </p>
+
+                <h2 class="mt-4">Iconos de una Generacion</h2>
+                <p>El exito de la trilogia reside en sus personajes. No son solo avatares; son leyendas:</p>
+                <ul class="curiosity-list">
+                    <li><strong>Capitan Price:</strong> El mentor inquebrantable y el rostro de la resistencia.</li>
+                    <li><strong>Soap MacTavish:</strong> El recluta que vimos convertirse en leyenda.</li>
+                    <li><strong>Ghost:</strong> El misterioso operativo cuya mascara de calavera se volvio el simbolo de una franquicia.</li>
+                </ul>
+                <p>
+                    Juntos, forman la Task Force 141, una unidad de elite que se enfrenta a la sombra de
+                    Vladimir Makarov, uno de los villanos mas frios y calculadores de la historia de los videojuegos.
+                </p>
+
+                <h2 class="mt-4">El Multijugador que Hizo Historia</h2>
+                <p>
+                    Mas alla de su campana, Modern Warfare revoluciono el juego en linea. Introdujo el sistema
+                    de rachas de bajas, personalizacion de armas con accesorios y un sistema de progresion que
+                    hoy en dia es el estandar de la industria. Mapas como Crash, Rust o Terminal son ahora
+                    templos del juego competitivo donde se forjaron amistades y rivalidades eternas.
+                </p>
+
+                <h2 class="mt-4">Por que sigue siendo relevante?</h2>
+                <p>
+                    A pesar de los anos y de las nuevas entregas, la trilogia original de Modern Warfare
+                    se mantiene como el estandar de oro. Es una obra que equilibra perfectamente la accion
+                    desenfrenada de Hollywood con una atmosfera de tension tactica.
+                </p>
+                <p>
+                    <strong>Preparate para revivir la historia.</strong> Corta el cable rojo.
+                    Asegura el perimetro. Esto es Modern Warfare.
+                </p>
+            </div>
+            <div class="col-lg-5 stagger-item delay-2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKT8QBfJwHLtTec1FJz13dGtU71lVTOlvSJg&s"
+                    class="img-fluid rounded-4 shadow content-image"
+                    alt="Escena militar nocturna con helicopteros y ambiente cinematografico">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer text-center">
+        <p>with &lt;3 by Juan Bonte</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

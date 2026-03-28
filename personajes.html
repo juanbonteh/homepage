@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Personajes</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MW Saga</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Abrir menu de navegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cod4.html">COD 4</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mw2.html">MW2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mw3.html">MW3</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="personajes.html" aria-current="page">Personajes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="curiosidades.html">Curiosidades</a></li>
+                </ul>
+                <button class="btn btn-sm btn-outline-accent ms-lg-3 mt-3 mt-lg-0" type="button" id="themeToggle"
+                    aria-label="Cambiar entre tema claro y oscuro">
+                    Tema
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container page-section">
+        <section class="content-card fade-in delay-1">
+            <h1>Personajes principales</h1>
+            <p>
+                Aqui tienes una resena de los cuatro pilares que definieron la narrativa de la trilogia original
+                de Modern Warfare (2007-2011). Estos personajes pasaron de ser simples modelos de soldados
+                a iconos culturales de los videojuegos.
+            </p>
+
+            <ul class="list-group character-list">
+                <li class="list-group-item stagger-item">
+                    <button class="character-trigger" type="button" data-target="price" aria-expanded="false">
+                        1. Captain John Price (El Mentor)
+                    </button>
+                    <article class="character-detail character-inline-panel" id="panel-price" hidden>
+                        <h2>1. Captain John Price (El Mentor)</h2>
+                        <img src="https://static.wikia.nocookie.net/cod/images/0/01/Price_MW3_model.png/revision/latest?cb=20120801171436&path-prefix=es"
+                            class="img-fluid rounded-4 shadow character-photo" alt="Captain John Price en Modern Warfare 3">
+                        <p>
+                            Price es el alma de la saga. Es el lider del escuadron Bravo 6 del SAS y representa
+                            la experiencia y el pragmatismo moral en la guerra.
+                        </p>
+                        <p>
+                            <strong>Evolucion:</strong> En MW1 es el guia que introduce a Soap al mundo de las
+                            operaciones especiales. En MW2, tras ser rescatado de un Gulag ruso, su papel se vuelve
+                            mas personal. En MW3, Price deja de ser un soldado disciplinado para convertirse en un
+                            hombre impulsado por la venganza pura, operando fuera de la ley para terminar lo que empezo.
+                        </p>
+                        <p>
+                            <strong>Legado:</strong> Es el unico que sobrevive a toda la tragedia, terminando la guerra
+                            solo, fumando su iconico puro mientras contempla el caos que ayudo a detener.
+                        </p>
+                    </article>
+                </li>
+                <li class="list-group-item stagger-item delay-1">
+                    <button class="character-trigger" type="button" data-target="soap" aria-expanded="false">
+                        2. John "Soap" MacTavish (El Protagonista)
+                    </button>
+                    <article class="character-detail character-inline-panel" id="panel-soap" hidden>
+                        <h2>2. John "Soap" MacTavish (El Protagonista)</h2>
+                        <img src="https://static.wikia.nocookie.net/cod/images/0/04/Soapg.png/revision/latest?cb=20190414195651&path-prefix=es"
+                            class="img-fluid rounded-4 shadow character-photo" alt="John Soap MacTavish con uniforme de combate">
+                        <p>
+                            Soap comienza como el "F.N.G." (el chico nuevo) en el famoso entrenamiento de carga de MW1.
+                            Es el personaje que el jugador ve crecer mas.
+                        </p>
+                        <p>
+                            <strong>Evolucion:</strong> Pasa de ser un recluta silencioso a un Capitan curtido en MW2,
+                            liderando la Task Force 141 y rescatando a su antiguo mentor (Price). Su relacion con el
+                            jugador es unica porque pasamos de ser el a verlo a el como un heroe legendario.
+                        </p>
+                        <p>
+                            <strong>Impacto:</strong> Su muerte en MW3 tras una explosion en Praga es, probablemente,
+                            el momento mas emocional de la trilogia, marcando el punto de no retorno para Price.
+                        </p>
+                    </article>
+                </li>
+                <li class="list-group-item stagger-item delay-2">
+                    <button class="character-trigger" type="button" data-target="ghost" aria-expanded="false">
+                        3. Simon "Ghost" Riley (El Icono Misterioso)
+                    </button>
+                    <article class="character-detail character-inline-panel" id="panel-ghost" hidden>
+                        <h2>3. Simon "Ghost" Riley (El Icono Misterioso)</h2>
+                        <img src="https://static.wikia.nocookie.net/cod/images/7/7c/Simon_Riley_remasterizado.jpg/revision/latest?cb=20210621183707&path-prefix=es"
+                            class="img-fluid rounded-4 shadow character-photo" alt="Simon Ghost Riley con su mascara de calavera">
+                        <p>
+                            A pesar de aparecer solo en un juego (MW2), Ghost se convirtio en el personaje mas popular
+                            de la franquicia debido a su diseno: una mascara de calavera, gafas de sol y una actitud
+                            extremadamente eficiente y letal.
+                        </p>
+                        <p>
+                            <strong>Rol:</strong> Era el segundo al mando de la Task Force 141 y el mejor apoyo de Roach.
+                            No tenia una historia profunda en pantalla (aunque si en comics), pero su presencia imponia respeto.
+                        </p>
+                        <p>
+                            <strong>Tragedia:</strong> Su muerte a manos del General Shepherd en la mision "Cabos Sueltos"
+                            es el giro de guion mas famoso de la saga. La imagen de Ghost siendo traicionado y quemado vivo
+                            genero un odio real de los jugadores hacia el villano.
+                        </p>
+                    </article>
+                </li>
+                <li class="list-group-item stagger-item delay-3">
+                    <button class="character-trigger" type="button" data-target="makarov" aria-expanded="false">
+                        4. Vladimir Makarov (El Caos Encarnado)
+                    </button>
+                    <article class="character-detail character-inline-panel" id="panel-makarov" hidden>
+                        <h2>4. Vladimir Makarov (El Caos Encarnado)</h2>
+                        <img src="https://static.wikia.nocookie.net/callofduty/images/2/20/Vladimir_Makarov_MW2R.jpg/revision/latest?cb=20200401033017"
+                            class="img-fluid rounded-4 shadow character-photo" alt="Vladimir Makarov mirando a camara">
+                        <p>
+                            Makarov no es solo un villano; es una fuerza de la naturaleza. Es un terrorista brillante
+                            y carente de cualquier rastro de humanidad.
+                        </p>
+                        <p>
+                            <strong>Rol:</strong> Fue el discipulo de Zakhaev y el arquitecto detras de cada desastre en
+                            la trilogia. El orquesto la masacre del aeropuerto en MW2 para provocar una guerra mundial
+                            y lanzo los ataques quimicos en MW3.
+                        </p>
+                        <p>
+                            <strong>Motivacion:</strong> A diferencia de otros villanos que buscan dinero o poder,
+                            Makarov buscaba "quemar el mundo" para reconstruir a Rusia como la potencia dominante.
+                            Su muerte en el epilogo de MW3, colgado por Price con un cable de acero,
+                            es el cierre perfecto para la destruccion que sembro.
+                        </p>
+                    </article>
+                </li>
+            </ul>
+            <a href="index.html" class="btn btn-accent mt-4">Volver al inicio</a>
+        </section>
+    </main>
+
+    <footer class="footer text-center">
+        <p>with &lt;3 by Juan Bonte</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
